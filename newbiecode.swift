@@ -20,7 +20,7 @@ func skip_odd(_ x:Int){
     }
 }
 
-print("Skipping even")
+print("First skipping even")
 skip_even(1906)
-print("Now skipping odd")
+print("And now skipping odd")
 skip_odd(1906)
