@@ -9,6 +9,14 @@ func skip_even(_ x:Int){
     }
 }
 
+
+
+
+
+
+
+
+
 func skip_odd(_ x:Int){
     var temp = String(x)
     for i in temp{

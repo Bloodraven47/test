@@ -3,7 +3,7 @@ func skip_even(_ x:Int){
     for i in temp{
         var newtemp = Int(String(i))!
         if newtemp%2==1{
-            print(i)
+            print(i, terminator: "")
         }
 
     }
@@ -14,13 +14,13 @@ func skip_odd(_ x:Int){
     for i in temp{
         var newtemp = Int(String(i))!
         if newtemp%2==0{
-            print(i)
+            print(i, terminator: "")
         }
 
     }
 }
-
-print("First skipping even")
-skip_even(1906)
-print("And now skipping odd")
-skip_odd(1906)
+var number = 1906
+print("Skipping even")
+skip_even(number)
+print("\nNow skipping odd")
+skip_odd(number)
