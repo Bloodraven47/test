@@ -1,26 +1,37 @@
-func skip_even(_ x:Int){
+enum skippingCase{
+    case odd
+    case even
+}
+
+func skipDecimalPlaces(_ x:Int,_ y:String){
     var temp = String(x)
-    for i in temp{
-        var newtemp = Int(String(i))!
-        if newtemp%2==1{
-            print(i, terminator: "")
+    var skip_odd=""
+    var skip_even=""
+    for (iterator,value) in temp.enumerated(){
+        if iterator%2==0{
+            skip_even+=String(Int(String(value))!)
+        }
+
+        else {
+            skip_odd+=String(Int(String(value))!)
         }
 
     }
-}
+    var typeOfskip:skippingCase = skippingCase.even
+    if (y=="even" || y=="Even"){
+        typeOfskip = skippingCase.even
+    }
+    else if (y=="odd" || y=="Odd"){
+        typeOfskip = skippingCase.odd
+    }
 
-func skip_odd(_ x:Int){
-    var temp = String(x)
-    for i in temp{
-        var newtemp = Int(String(i))!
-        if newtemp%2==0{
-            print(i, terminator: "")
-        }
-
+    switch typeOfskip{
+        case .odd:print(skip_odd)
+        case .even:print(skip_even)
+        default: print("Input is wrong")
     }
 }
+
+
 var number = 1906
-print("Skipping even")
-skip_even(number)
-print("\nNow skipping odd")
-skip_odd(number)
+skipDecimalPlaces(number,"Odd")
