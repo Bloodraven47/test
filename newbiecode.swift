@@ -18,11 +18,16 @@ func skipDecimalPlaces(_ x:Int,_ y:String){
 
     }
     var typeOfskip:skippingCase = skippingCase.even
-    if (y=="even" || y=="Even"){
+    if (y.lowercased()=="even"){
         typeOfskip = skippingCase.even
     }
-    else if (y=="odd" || y=="Odd"){
+    else if (y.lowercased()=="odd"){
         typeOfskip = skippingCase.odd
+    }
+
+    else{
+        print("Input is wrong")
+        return
     }
 
     switch typeOfskip{
@@ -34,4 +39,4 @@ func skipDecimalPlaces(_ x:Int,_ y:String){
 
 
 var number = 1906
-skipDecimalPlaces(number,"Odd")
+skipDecimalPlaces(number,"EVen")
